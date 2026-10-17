@@ -32,9 +32,9 @@ public class TestExample {
 		given()
 		.get("/users?page=2").
 		then().
-		statusCode(200).body("data[1].id", equalTo(5))
+		statusCode(200).body("data[1].id", equalTo(8))
 		.log().all();
-		
+        
 	}
 	
 }

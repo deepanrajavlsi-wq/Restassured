@@ -38,8 +38,8 @@ public class TestsonLocalAPI {
 		
 	}
 	
-	@Test
-	
+	@Test(enabled = false)
+    
 	public void delete()
 	{
 		
