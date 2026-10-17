@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven-3.10.0'
+    }
+
     options {
         timestamps()
     }
@@ -23,8 +27,7 @@ pipeline {
 
     post {
         always {
-            junit testResults: 'RESTAssuredAutomation/target/surefire-reports/TEST-*.xml',
-                  allowEmptyResults: true
+            junit testResults: 'RESTAssuredAutomation/target/surefire-reports/TEST-*.xml'
         }
     }
 }
